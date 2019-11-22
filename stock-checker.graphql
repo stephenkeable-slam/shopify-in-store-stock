@@ -1,0 +1,24 @@
+query getStock($variantId: ID!) {
+  productVariant(id: "$variantId") {
+    inventoryItem {
+      locationsCount
+      inventoryLevels(first: 3) {
+        edges {
+          node {
+            available
+            location {
+              name
+              isActive
+              shipsInventory
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Query Variable Example*/
+{
+  "variantId": "gid://shopify/ProductVariant/13744894836806"
+}
