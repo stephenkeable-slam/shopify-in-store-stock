@@ -1,5 +1,5 @@
 query getStock($variantId: ID!) {
-  productVariant(id: "$variantId") {
+  productVariant(id: $variantId) {
     inventoryItem {
       locationsCount
       inventoryLevels(first: 3) {
