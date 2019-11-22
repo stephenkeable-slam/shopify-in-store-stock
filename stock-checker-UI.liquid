@@ -1,0 +1,20 @@
+{%- if product.available -%}
+<div class="grid__item one-whole">
+  <p><button id="checkStockLink" class="text-right">Check in store availability</button></p>
+  <div id="checkStockOutput" class="grid"></div>
+</div>
+
+<!-- Stock Checker -->
+{{ 'storeChecker.js' | asset_url | script_tag }}
+<script>
+var stockCheckLink = document.getElementById("checkStockLink");
+var stockCheckOutput = document.getElementById("checkStockOutput");
+var stockChecker = new StockChecker(stockCheckOutput);
+
+stockCheckLink.addEventListener("click", function(e) {
+  e.preventDefault();
+  var variantElement = document.querySelector('input[name="id"]:checked') || document.querySelector('input[name="id"]');
+  stockChecker.getInventoryIdForVariant(variantElement);
+});
+</script>
+{%- endif -%}
