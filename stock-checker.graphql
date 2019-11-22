@@ -18,7 +18,7 @@ query getStock($variantId: ID!) {
   }
 }
 
-/* Query Variable Example*/
-{
-  "variantId": "gid://shopify/ProductVariant/13744894836806"
-}
+# Query Variable Example
+# {
+#   "variantId": "gid://shopify/ProductVariant/13744894836806"
+# }
