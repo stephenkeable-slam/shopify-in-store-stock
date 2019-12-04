@@ -11,3 +11,5 @@ Intended as starting blocks to building your own in store stock checker, similar
 Basic architecture: Lambda JavaScript file, exposed via API gateway, then called from JS on the Shopify product page.
 
 Front end UI code should really make use of [locales](https://help.shopify.com/en/themes/development/theme-store-requirements/internationalizing/translation-filter) for any strings like the "Checking stock" text.
+
+[Brief medium article about the stock checker](https://medium.com/@stephenkeable/shopify-in-store-stock-checker-6ef364a50d52)
